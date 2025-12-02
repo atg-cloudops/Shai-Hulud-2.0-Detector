@@ -1200,6 +1200,7 @@ A huge thank you to all the community members who have contributed to this proje
 | <img src=https://github.com/alokemajumder.png width=32 height=32 alt=@alokemajumder> | [@alokemajumder](https://github.com/alokemajumder) | Code contributions, Issue reports, Pull requests |
 | <img src=https://github.com/buggedcom.png width=32 height=32 alt=@buggedcom> | [@buggedcom](https://github.com/buggedcom) | Discussions |
 | <img src=https://github.com/gaellafond.png width=32 height=32 alt=@gaellafond> | [@gaellafond](https://github.com/gaellafond) | Issue reports |
+| <img src=https://github.com/jeis4wpi.png width=32 height=32 alt=@jeis4wpi> | [@jeis4wpi](https://github.com/jeis4wpi) | Issue reports |
 | <img src=https://github.com/julia-infocaster.png width=32 height=32 alt=@julia-infocaster> | [@julia-infocaster](https://github.com/julia-infocaster) | Code contributions, Pull requests |
 | <img src=https://github.com/luca-cond.png width=32 height=32 alt=@luca-cond> | [@luca-cond](https://github.com/luca-cond) | Discussions |
 | <img src=https://github.com/maxie7.png width=32 height=32 alt=@maxie7> | [@maxie7](https://github.com/maxie7) | Code contributions, Discussions, Pull requests |
