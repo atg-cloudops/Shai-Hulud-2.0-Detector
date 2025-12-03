@@ -1,4 +1,4 @@
- <p align="center">
+<p align="center">
   <a href="https://github.com/marketplace/actions/shai-hulud-2-0-detector"><img src="https://img.shields.io/badge/GitHub%20Marketplace-Available-2ea44f?style=for-the-badge&logo=github" alt="GitHub Marketplace"></a>
   <img src="https://img.shields.io/badge/Supply%20Chain-Security-red?style=for-the-badge" alt="Supply Chain Security">
   <img src="https://img.shields.io/badge/npm-Protected-green?style=for-the-badge&logo=npm" alt="npm Protected">
@@ -154,7 +154,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+      - uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
         with:
           fail-on-critical: true
 ```
@@ -330,13 +330,13 @@ The easiest way to use Shai-Hulud Detector is as a GitHub Action. **Now availabl
 #### Minimal Setup
 
 ```yaml
-- uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+- uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
 ```
 
 #### Full Setup with All Options
 
 ```yaml
-- uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+- uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
   with:
     fail-on-critical: true
     fail-on-high: false
@@ -355,7 +355,7 @@ You can also run the detector locally for development or CI systems without GitH
 
 ```bash
 # Clone and run
-git clone https://github.com/gensecaihq/Shai-Hulud-2.0-Detector.git
+git clone https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git
 cd Shai-Hulud-2.0-Detector
 npm install
 npm run build
@@ -421,7 +421,7 @@ shai-hulud-scan:
   image: node:20
   stage: test
   script:
-    - git clone https://github.com/gensecaihq/Shai-Hulud-2.0-Detector.git /tmp/detector
+    - git clone https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git /tmp/detector
     - cd /tmp/detector && npm ci
     - |
       export INPUT_FAIL_ON_CRITICAL=true
@@ -444,7 +444,7 @@ pipeline {
         stage('Security Scan') {
             steps {
                 sh '''
-                    git clone https://github.com/gensecaihq/Shai-Hulud-2.0-Detector.git /tmp/detector
+                    git clone [https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git](https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git) /tmp/detector
                     cd /tmp/detector && npm ci
                     export INPUT_FAIL_ON_CRITICAL=true
                     export INPUT_WORKING_DIRECTORY=${WORKSPACE}
@@ -475,7 +475,7 @@ steps:
       versionSpec: '20.x'
 
   - script: |
-      git clone https://github.com/gensecaihq/Shai-Hulud-2.0-Detector.git /tmp/detector
+      git clone [https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git](https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git) /tmp/detector
       cd /tmp/detector && npm ci
       export INPUT_FAIL_ON_CRITICAL=true
       export INPUT_WORKING_DIRECTORY=$(Build.SourcesDirectory)
@@ -497,7 +497,7 @@ jobs:
       - run:
           name: Shai-Hulud Security Scan
           command: |
-            git clone https://github.com/gensecaihq/Shai-Hulud-2.0-Detector.git /tmp/detector
+            git clone [https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git](https://github.com/atg-cloudops/Shai-Hulud-2.0-Detector.git) /tmp/detector
             cd /tmp/detector && npm ci
             export INPUT_FAIL_ON_CRITICAL=true
             export INPUT_WORKING_DIRECTORY=$(pwd)
@@ -526,7 +526,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+      - uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
 ```
 
 #### Scan Only Dependency Files
@@ -552,7 +552,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+      - uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
 ```
 
 #### Scheduled Daily Scans
@@ -569,7 +569,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+      - uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
         with:
           fail-on-any: true
 ```
@@ -592,7 +592,7 @@ jobs:
 
       - name: Scan for Shai-Hulud 2.0
         id: scan
-        uses: gensecaihq/Shai-Hulud-2.0-Detector@v1
+        uses: atg-cloudops/Shai-Hulud-2.0-Detector@v1
         with:
           fail-on-critical: true
           fail-on-high: true
@@ -613,7 +613,7 @@ jobs:
 #### Strict Mode - Fail on Any Detection
 
 ```yaml
-- uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+- uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
   with:
     fail-on-any: true
 ```
@@ -621,7 +621,7 @@ jobs:
 #### Warning Mode - Report but Don't Fail
 
 ```yaml
-- uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+- uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
   with:
     fail-on-critical: false
     fail-on-high: false
@@ -635,7 +635,7 @@ The detector automatically scans subdirectories for package files (up to 5 level
 #### Scan Entire Monorepo
 
 ```yaml
-- uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+- uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
   with:
     working-directory: '.'
     scan-lockfiles: true
@@ -644,7 +644,7 @@ The detector automatically scans subdirectories for package files (up to 5 level
 #### Scan Specific Package
 
 ```yaml
-- uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+- uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
   with:
     working-directory: './packages/frontend'
 ```
@@ -660,7 +660,7 @@ jobs:
         package: [frontend, backend, shared, cli]
     steps:
       - uses: actions/checkout@v4
-      - uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+      - uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
         with:
           working-directory: './packages/${{ matrix.package }}'
 ```
@@ -672,7 +672,7 @@ Generate SARIF reports for GitHub Security tab integration:
 #### Basic SARIF Output
 
 ```yaml
-- uses: gensecaihq/Shai-Hulud-2.0-Detector@v2
+- uses: atg-cloudops/Shai-Hulud-2.0-Detector@v2
   with:
     output-format: sarif
 
@@ -699,7 +699,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Shai-Hulud Scan
-        uses: gensecaihq/Shai-Hulud-2.0-Detector@v1
+        uses: atg-cloudops/Shai-Hulud-2.0-Detector@v1
         with:
           output-format: sarif
           fail-on-critical: false  # Don't fail, just report
@@ -719,7 +719,7 @@ Access scan results for conditional logic or notifications:
 ```yaml
 - name: Run Scan
   id: scan
-  uses: gensecaihq/Shai-Hulud-2.0-Detector@v1
+  uses: atg-cloudops/Shai-Hulud-2.0-Detector@v1
   with:
     fail-on-critical: false
     output-format: json
@@ -1077,7 +1077,7 @@ npm install --ignore-scripts  # Prevent postinstall hooks
 npm audit
 
 # 5. Run security scan
-npx gensecaihq/Shai-Hulud-2.0-Detector
+npx atg-cloudops/Shai-Hulud-2.0-Detector
 ```
 
 ---
