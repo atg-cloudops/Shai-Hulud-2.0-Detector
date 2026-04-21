@@ -125,7 +125,7 @@ We accept code contributions for:
 
 ### Prerequisites
 
-- Node.js 20.x or higher
+- Node.js 24.x (matches the GitHub Actions `node24` runtime used by this action)
 - npm 10.x or higher
 - Git
 
